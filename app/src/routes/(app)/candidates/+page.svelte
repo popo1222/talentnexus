@@ -5,6 +5,6 @@
 	$: ({ candidates } = data);
 </script>
 
-<div class="w-full mx-auto py-10">
+<div class="w-full mx-auto">
 	<DataTable data={candidates} />
 </div>

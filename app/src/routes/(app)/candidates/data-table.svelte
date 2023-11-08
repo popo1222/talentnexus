@@ -15,6 +15,7 @@
 	import { ArrowUpDown, ChevronDown } from 'lucide-svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import DataTableCheckbox from './data-table-checkbox.svelte';
+	import DataTableAvatar from './data-table-avatar.svelte';
 
 	export let data;
 
@@ -43,6 +44,21 @@
 				return createRender(DataTableCheckbox, {
 					checked: isSelected
 				});
+			},
+			plugins: {
+				sort: {
+					disable: true
+				},
+				filter: {
+					exclude: true
+				}
+			}
+		}),
+		table.column({
+			accessor: (data) => data.id,
+			header: 'Avatar',
+			cell: (data) => {
+				return createRender(DataTableAvatar);
 			},
 			plugins: {
 				sort: {
@@ -114,7 +130,12 @@
 
 <div>
 	<div class="flex items-center py-4">
-		<Input class="max-w-sm" placeholder="Filter emails..." type="text" bind:value={$filterValue} />
+		<Input
+			class="max-w-sm"
+			placeholder="Filter name / email"
+			type="text"
+			bind:value={$filterValue}
+		/>
 		<DropdownMenu.Root>
 			<DropdownMenu.Trigger asChild let:builder>
 				<Button variant="outline" class="ml-auto" builders={[builder]}>

@@ -34,7 +34,7 @@
 	];
 </script>
 
-<div class="w-screen h-screen lg:flex lg:items-center lg:px-6 lg:py-6">
+<div class="w-screen h-screen lg:flex lg:items-center">
 	<div class="lg:border lg:shadow-xl w-full h-full overflow-hidden bg-white">
 		<div class="hidden lg:flex items-center h-12 py-1 px-3 space-x-1 rounded-none">
 			<Menubar.Root class="rounded-none border-none h-0 font-normal">
@@ -99,7 +99,9 @@
 					{/each}
 				</div>
 			</div>
-			<div class="lg:border-l lg:col-span-4 lg:px-8 lg:py-4"><slot /></div>
+			<div class="lg:border-l lg:col-span-4 lg:px-10 lg:pt-10 lg:pb-16 overflow-scroll h-full">
+				<slot />
+			</div>
 		</div>
 	</div>
 </div>
