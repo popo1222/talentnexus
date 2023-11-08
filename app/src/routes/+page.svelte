@@ -47,7 +47,7 @@
 		/>
 		<div class="relative z-20 flex items-center text-lg font-medium">
 			<!-- <Command class="mr-2 h-6 w-6" /> -->
-			Talent Nexus
+			<img src="/1.png" alt="Talent Nexus" class="w-28" />
 		</div>
 		<div class="relative z-20 mt-auto">
 			<blockquote class="space-y-2" />
@@ -56,7 +56,12 @@
 	<div class="lg:p-8">
 		<div class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
 			<div class="flex flex-col space-y-2 text-center">
-				<h1 class="text-2xl font-semibold tracking-tight">Welcome to Talent Nexus</h1>
+				<h1 class="text-2xl font-semibold tracking-tight">
+					Welcome to <span
+						class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-bold"
+						>TalentNexus</span
+					>
+				</h1>
 				<p class="text-sm text-muted-foreground">Enter your email below to login</p>
 			</div>
 			<div class="grid gap-6">
